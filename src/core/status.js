@@ -11,7 +11,7 @@ module.exports = function(bot, status, config, channel, writable = true)
          bot.setPresence({
             status: "online",
             game: {
-               name: config.translateCmdShort + " help / "
+               name: config.translateCmdShort + " help / ",
                type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
             }
          });
