@@ -1,27 +1,26 @@
 // ------------------
 // Update Bot Status
 // ------------------
-
 module.exports = function(bot, status, config, channel, writable = true)
 {
    const statusMap =
    {
-      bot.setPresence({
+      "online": function()
+      {
+         bot.setPresence({
             status: "online",
             game: {
-               name: config.translateCmdShort + " help / "
+               name: config.translateCmdShort + " help ",
                type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
             }
          });
       },
-
       "busy": function()
       {
          bot.setPresence({
             status: "dnd"
          });
       },
-
       "free": function()
       {
          bot.setPresence({
@@ -29,7 +28,6 @@ module.exports = function(bot, status, config, channel, writable = true)
          });
       }
    };
-
    //if (status && statusMap.hasOwnProperty(status) && writable)
    if (Object.prototype.hasOwnProperty.call(status && statusMap,status) && writable)
    {
