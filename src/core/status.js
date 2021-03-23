@@ -13,7 +13,7 @@ module.exports = function(bot, status, config, channel, writable = true)
   url: "www.google.com"
 })
             }
-         });
+         };
       },
 
       "busy": function()
