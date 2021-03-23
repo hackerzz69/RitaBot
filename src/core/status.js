@@ -6,14 +6,14 @@ module.exports = function(bot, status, config, channel, writable = true)
 {
    const statusMap =
    {
-      "online": function()
-      {
-         client.user.setActivity("!t help", {
-  type: "STREAMING",
-  url: "www.google.com"
-})
+      bot.setPresence({
+            status: "online",
+            game: {
+               name: config.translateCmdShort + " help / " + config.translateCmd +" help - V." + config.version
+               name: config.translateCmdShort + " help / "
+               type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
             }
-         };
+         });
       },
 
       "busy": function()
