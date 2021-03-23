@@ -32,7 +32,7 @@ module.exports = function(data)
       "Yoruba","Zulu"
    ];
 
-   var output = "**```Supported Languages```**\n";
+   var output = "**```List of Supported Languages```**\n";
 
    langList.forEach(lang =>
    {
