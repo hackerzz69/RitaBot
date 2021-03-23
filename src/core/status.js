@@ -11,7 +11,7 @@ module.exports = function(bot, status, config, channel, writable = true)
          client.user.setActivity("!t help", {
   type: "STREAMING",
   url: "www.google.com"
-});
+})
             }
          });
       },
